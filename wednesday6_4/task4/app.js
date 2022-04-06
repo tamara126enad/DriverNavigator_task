@@ -1,44 +1,21 @@
 'use strict';
 
-// let array=[2,0,9,4]
-// let sortArr=[];
-// let max=arr[0];
-// let min =arr[0];
-// let k;
-
-// function sort=arr (){
-// for (let i = 0; i < array.length-1; i ++) {
-//   for (let j = 0; j < array.length-1; j++) {
-//          if (max < array(j))
-//         {max = array[j];
-//          k= j;
-//       }}
-//    }
-//    sortArr[i] = max;
-//      arr[k] = null;
-//       min = max;
-//        return sortArr; 
-// }
-// console.log(sortArr);
-
-let arr1 = [2,0,9,4];
-function sort(arr){
-    let l= arr.length;
-    let array= [];
-    let max= arr[0];
-    let index= 0;
-    for(let j=0; j<l; j++){
-    for(let i=0; i<l; i++){
-        if(arr[i] >= max){
-            max= arr[i];
-            index= i;
+console.log("[2,9,0,4]");
+function sorting(arr){
+    for (let i = 0; i < arr.length; i++) 
+        for (let j = i + 1; j < arr.length; j++) {  
+            let t= 0; 
+            if (arr[i] < arr[j]) {     
+                t= arr[i];              
+                arr[i] = arr[j];            
+                arr[j] = t;
+            }
         }
+        return arr
     }
-    array.push(max);
-    arr.splice(index,1)
-    max= arr[0];
-}
-return array;
-}
+console.log(sorting( [2,9,0,4]));
 
-document.getElementById('after').innerHTML= array;
+document.getElementById('before').innerHTML="[2,9,0,4]";
+console.log("Dyar is Driver, Tamara is Navigator");
+document.getElementById('title').innerHTML="Dyar is Driver, Tamara is Navigator <br> Sort array decending"
+document.getElementById('after').innerHTML="[ "+ sorting( [2,9,0,4]) + " ]" ;
