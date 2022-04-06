@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver-Navigator</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+let arr=[8, 3, 4, 8, 4, 8];
+console.log(arr);
+let reverseArr= arr.reverse();
+console.log(reverseArr);
+console.log("Tamara is Driver, Dyar is Navigator");
+/****************************/
+
+let array = [1, 3, 4, 8, 4, 8];
+let arr1 = array.length-1;
+console.log(array);
+for(let i=0; i<=arr1/2; i++) {
+  let t = array[i];
+  array[i] = array[arr1-i];
+  array[arr1-i] = t;
+}
+console.log(array);
+console.log("Dyar is Driver, Tamara is Navigator");
+
+</script>
+</html>
